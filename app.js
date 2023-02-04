@@ -58,3 +58,27 @@ function quad(x, y) {
   }
 }
 quad(2, -3);
+
+//4. What type of triangle is it?
+
+function typeOfTriangle(x, y, z) {
+  let isValid = false;
+  if (x + y > z && x + z > y && y + z > x) {
+    isValid = true;
+  } else {
+    console.log("Invalid triangle");
+  }
+  if (isValid) {
+    if (x == y && y == z) {
+      console.log("Equilateral triangle");
+    } else if (x == y || y == z) {
+      console.log("Isosceles triangle");
+    } else if (x != y && y != z) {
+      console.log("Scalene triangle");
+    }
+  }
+}
+typeOfTriangle(3, 3, 3);
+typeOfTriangle(2, 2, 3);
+typeOfTriangle(4, 5, 7);
+typeOfTriangle(1, 1, 2);

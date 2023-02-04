@@ -22,3 +22,18 @@ function printOddsNegative(count) {
   }
 }
 printOddsNegative(-10);
+
+//2. Check if the person can drive
+
+function checkAge(age, userName) {
+  let aboveSixteen = "You can drive";
+  let belowSixteem = `Sorry ${userName}, you need to wait until you are 16`;
+  if (age >= 16) {
+    console.log(aboveSixteen);
+  } else if (age < 16) {
+    console.log(belowSixteem);
+  } else {
+    console.log("Invalid entry. Enter in correct value");
+  }
+}
+checkAge(15, "Jackie Chan");

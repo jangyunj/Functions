@@ -37,3 +37,24 @@ function checkAge(age, userName) {
   }
 }
 checkAge(15, "Jackie Chan");
+
+//3. Which quadrant is it?
+
+function quad(x, y) {
+  if (x > 0 && y > 0) {
+    console.log(`${(x, y)} is in Quadrant 1`);
+  } else if (x > 0 && y < 0) {
+    console.log(`${(x, y)} is in Quadrant 4`);
+  } else if (x < 0 && y > 0) {
+    console.log(`${(x, y)} is in Quadrant 2`);
+  } else if (x < 0 && y < 0) {
+    console.log(`${(x, y)} is in Quadrant 3`);
+  } else if (x != 0 && y == 0) {
+    console.log(`${(x, y)} is on the X axis`);
+  } else if (x == 0 && y != 0) {
+    console.log(`${(x, y)} is on the Y axis`);
+  } else {
+    console.log(`${(x, y)} is on the Origin`);
+  }
+}
+quad(2, -3);

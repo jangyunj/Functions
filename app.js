@@ -82,3 +82,34 @@ typeOfTriangle(3, 3, 3);
 typeOfTriangle(2, 2, 3);
 typeOfTriangle(4, 5, 7);
 typeOfTriangle(1, 1, 2);
+
+//5. Data Plan Status
+
+function dataUsage(planLimit, day, usage) {
+  let remainingDays = 30 - day;
+  let averageUsagePerMonth = planLimit / 30;
+  let averageUsageInCurrentDay = usage / day;
+  let potentialUsageOverload = (usage / day) * 30 - planLimit;
+  let usageLeftToStayInPlan = (planLimit - usage) / remainingDays;
+
+  console.log(
+    `Average daily use is: ${averageUsagePerMonth.toFixed(2)} GB/day`
+  ); //fixes to two decimal places
+
+  if (potentialUsageOverload < 0) {
+    console.log("You didn't exceed the plan.");
+  } else if (potentialUsageOverload > 0) {
+    console.log(`You are EXCEEDING your average daily use (${averageUsageInCurrentDay} GB/day),
+            continuing this high usage, you'll exceed your data plan by ${potentialUsageOverload}GB. \n
+            To stay below your data plan, use no more than ${usageLeftToStayInPlan} GB/day.`);
+  } else {
+    console.log(
+      `Currently, you have: ${day} used, ${remainingDays} remaining.`
+    );
+  }
+}
+
+dataUsage(100, 15, 56);
+dataUsage(50, 12, 25);
+dataUsage(50, 15, 25);
+dataUsage(50, 10, 25);

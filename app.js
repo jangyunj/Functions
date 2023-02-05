@@ -23,6 +23,26 @@ function printOddsNegative(count) {
 }
 printOddsNegative(-10);
 
+//1.5 Print evens
+
+function printEvens(count) {
+  for (let i = 0; i < count; i++) {
+    if (i % 2 == 0) {
+      console.log(i);
+    }
+  }
+}
+printEvens(20);
+
+function printEvensNegative(count) {
+  for (let i = 0; i > count; i--) {
+    if (i % 2 == 0) {
+      console.log(i);
+    }
+  }
+}
+printEvensNegative(-20);
+
 //2. Check if the person can drive
 
 function checkAge(age, userName) {
